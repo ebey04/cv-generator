@@ -3,3 +3,7 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     color:var(--text-color);
 }
+
+p{
+    color: var(--text-color);
+}
