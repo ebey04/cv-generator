@@ -1,5 +1,6 @@
 import './personal.css'
-import '../Input'
+import Input from '../Input/Input'
+import { useState } from 'react'
 
 function Personal () {
     const [firstName, setFirstName] = useState("");
@@ -10,6 +11,8 @@ function Personal () {
 
     return (
         <> 
+
+            <h2>Personal Information</h2>
             <Input
                 label= "First Name"
                 name= "firstName"
@@ -51,3 +54,5 @@ function Personal () {
         </>
     )
 }
+
+export default Personal;
