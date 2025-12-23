@@ -1,0 +1,13 @@
+.btn{
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 1rem;
+    background-color: #40534C;
+    transition: transform 0.2s ease;
+}
+
+.btn:focus-visible, btn:hover {
+    border: 2px solid blue;
+    transform: translateY(-5px);
+}
