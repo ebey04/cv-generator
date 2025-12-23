@@ -1,4 +1,4 @@
-import './Form.css'
+import './input.css'
 
 function Input({
     label,
@@ -6,7 +6,8 @@ function Input({
     value,
     onChange,
     name,
-    placeholder
+    placeholder,
+    ...rest
     }) 
     {
         return (
