@@ -5,14 +5,13 @@ h2{
     border-bottom: 1px solid var(--text-color);
 }
 
-.input-group{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
-    gap: 1rem;
-    justify-content: flex-start;
-    margin-left: 1rem;
-    border: 2px solid green;
+.personal-container{
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 8px;
+    background-color: #906a95;
+    margin-left: 1.5rem;
 }
+
 
 .label-group{
     display: flex;
@@ -20,8 +19,8 @@ h2{
 }
 
 label{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--text-color);
+    font-family: var(--font-family);
+    color: white;
 }
 
 input{

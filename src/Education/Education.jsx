@@ -28,6 +28,7 @@ function Education() {
         <section>
             <h2>Education</h2>
 
+            <div className= "edContainer">
             {educations.map((edu) => (
                 <div key={edu.id} className="edCard">
                 <Input
@@ -55,8 +56,11 @@ function Education() {
                 />
                 </div>
             ))}
+            </div>
 
-            <Button name="Add Education" onClick={addEducation} />
+            <Button children="Add Education" onClick={addEducation} />
         </section>
     );
 }
+
+export default Education;

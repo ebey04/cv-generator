@@ -1,9 +1,10 @@
 :root {
-  --text-color: #40534C;
+  --text-color: #000;
   --text-color-accent: #ac39ac;
   --button-color: #40534C;
-  --background-color: #e0ceb3;
-  --dark-accent-color: #1A3636;
+  --background-color: white;
+  --dark-accent-color: #0071E3;
+  --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -25,6 +26,13 @@ body {
   background-color: var(--background-color);
 }
 
+h2{
+  margin: 1rem;
+  font-size: clamp(1rem, 1.75vw, 3rem);
+  font-family: 'Courier New', Courier, monospace;
+  color:var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
 
 @media (prefers-color-scheme: light) {
   :root {

@@ -4,10 +4,13 @@
     padding: 8px;
     margin: 1rem;
     background-color: #40534C;
-    transition: transform 0.2s ease;
+    transition: transform 300ms ease;
+    color: white;
+    box-shadow: 2px 2px 4px grey;
+    cursor: pointer;
 }
 
-.btn:focus-visible, btn:hover {
-    border: 2px solid blue;
+.btn:focus-visible, .btn:hover {
+    box-shadow: 2px 2px 4px white;
     transform: translateY(-5px);
 }
