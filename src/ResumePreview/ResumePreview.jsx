@@ -30,3 +30,5 @@ function ResumePreview(
         </div>
     );
 }
+
+export default ResumePreview;

@@ -4,9 +4,10 @@ import Personal from '../Personal/Personal'
 import Education from '../Education/Education'
 import Work from '../Work/Work'
 import Button from '../Button/Button'
+import ResumePreview from '../ResumePreview/ResumePreview'
 
 function ResumeForm() {
-    const [personals, setPersonals] - useState(
+    const [personals, setPersonals] = useState(
             {firstName: "", lastName: "", address: "", phone: "", email: ""})
 
     function updatePersonal(field, value) {
@@ -78,8 +79,9 @@ function ResumeForm() {
                     updateWork = {updateWork}
                     addWork = {addWork}
                 />
-
-                <Button type="submit" children="Submit" />
+                <div className= "submitBtn">
+                    <Button type="submit" children="Submit" />
+                </div>
             </form>
 
             {submitted && (

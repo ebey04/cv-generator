@@ -1,17 +1,16 @@
 h2{
     font-size: clamp(1rem, 1.75vw, 3rem);
-    font-family: 'Courier New', Courier, monospace;
     color:var(--text-color);
     border-bottom: 1px solid var(--text-color);
 }
 
 .personal-container{
+    border: 5px groove #906a95cd;
     box-shadow: 2px 2px 4px grey;
-    border-radius: 8px;
-    background-color: #906a95;
-    margin-left: 1.5rem;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-
 
 .label-group{
     display: flex;
@@ -19,7 +18,6 @@ h2{
 }
 
 label{
-    font-family: var(--font-family);
     color: white;
 }
 

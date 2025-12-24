@@ -8,6 +8,7 @@
     color: white;
     box-shadow: 2px 2px 4px grey;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 .btn:focus-visible, .btn:hover {
