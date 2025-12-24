@@ -1,4 +1,5 @@
 import './resumepreview.css'
+import Button from '../Button/Button';
 
 function ResumePreview(
     {personal, educations, works}
@@ -27,6 +28,8 @@ function ResumePreview(
                 </div>
                 ))}
             </section>
+
+            <Button children="Print Resume" onClick={() => window.print()} />
         </div>
     );
 }
