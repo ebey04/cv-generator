@@ -3,7 +3,7 @@
 A responsive resume builder built with React that allows users to enter personal, education, and work history information and instantly preview a formatted resume. Data persists between page refreshes using `localStorage`, and the resume can be printed directly from the browser.
 
 ## 🔗 Live Demo
-👉 **[View Live Demo](https://your-live-demo-link-here)**
+👉 **[View Live Demo](https://ebey-cv-generator.netlify.app/)**
 
 ---
 
