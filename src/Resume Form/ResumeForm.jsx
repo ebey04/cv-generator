@@ -3,6 +3,7 @@ import './resume.css'
 import Header from '../Header/Header'
 import Personal from '../Personal/Personal'
 import Education from '../Education/Education'
+import Work from '../Work/Work'
 
 function ResumeForm() {
     
@@ -12,6 +13,7 @@ function ResumeForm() {
         <Header />
         <Personal />
         <Education />
+        <Work />
         </>
     )
 }
