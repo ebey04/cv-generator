@@ -1,6 +1,5 @@
 import './personal.css'
 import Input from '../Input/Input'
-import { useState } from 'react'
 
 function Personal (
     {personals, updatePersonal}

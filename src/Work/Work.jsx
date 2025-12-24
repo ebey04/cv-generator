@@ -1,6 +1,5 @@
 import './work.css'
 import Input from '../Input/Input'
-import { useState } from 'react'
 import Button from "../Button/Button"
 
 function Work(
