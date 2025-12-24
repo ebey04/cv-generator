@@ -1,0 +1,12 @@
+.workContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+    margin-left: 1.5rem;
+}
+
+.workCard{
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 8px;
+    background-color: #906a95;
+}
