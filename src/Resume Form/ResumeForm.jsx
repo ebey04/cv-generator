@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useEffect } from 'react'
 import './resume.css'
 import Personal from '../Personal/Personal'
 import Education from '../Education/Education'
@@ -7,6 +8,7 @@ import Button from '../Button/Button'
 import ResumePreview from '../ResumePreview/ResumePreview'
 
 function ResumeForm() {
+
     const [personals, setPersonals] = useState(
             {firstName: "", lastName: "", address: "", phone: "", email: ""})
 
@@ -55,12 +57,58 @@ function ResumeForm() {
         );
     }
 
+    function clearResume() {
+        localStorage.removeItem("resumeData");
+
+        setPersonals({
+            firstName: "",
+            lastName: "",
+            address: "",
+            phone: "",
+            email: ""
+        });
+
+        setEducations([
+            { id: crypto.randomUUID(), school: "", degree: "", gradYear: "" }
+        ]);
+
+        setWorks([
+            { id: crypto.randomUUID(), company: "", dates: "", position: "", duties: "" }
+        ]);
+
+        setSubmitted(false);
+    }
+
+
     const [submitted, setSubmitted] = useState(false);
 
     function handleSubmit(e) {
     e.preventDefault();
     setSubmitted(true);
     }
+    
+    useEffect(() => {
+    const savedData = localStorage.getItem("resumeData");
+
+    if (savedData) {
+        const parsed = JSON.parse(savedData);
+        setPersonals(parsed.personal);
+        setEducations(parsed.educations);
+        setWorks(parsed.works);
+
+        setSubmitted(true); 
+    }
+}, []);
+
+useEffect(() => {
+    const dataToSave = {
+        personal: personals,
+        educations,
+        works
+    };
+
+    localStorage.setItem("resumeData", JSON.stringify(dataToSave));
+    }, [personals, educations, works]);
 
     return (
         <div className="layout">
@@ -79,9 +127,15 @@ function ResumeForm() {
                     updateWork = {updateWork}
                     addWork = {addWork}
                 />
+
+            <div className="masterBtns">
+                <Button onClick= {clearResume} children= "Clear Resume" />
+
                 <div className= "submitBtn">
                     <Button type="submit" children="Submit" />
                 </div>
+            </div>
+            
             </form>
 
             {submitted && (

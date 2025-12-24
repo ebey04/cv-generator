@@ -11,3 +11,7 @@
     background-image: radial-gradient(circle, #523d56, #906a95);
     font-weight: 600;
 }
+
+.masterBtns{
+    display: flex;
+}

@@ -1,8 +1,8 @@
 .resume{
     background-color: white;
-    border: 3px solid var(--accent-color);
+    border: 3px solid #563f5a;
     border-radius: 16px;
-    box-shadow: 4px 4px 7px var(--accent-color);
+    box-shadow: 6px 6px 10px #563f5a;
     padding: 0 1rem;
 }
 
