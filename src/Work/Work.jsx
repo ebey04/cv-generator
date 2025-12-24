@@ -3,25 +3,10 @@ import Input from '../Input/Input'
 import { useState } from 'react'
 import Button from "../Button/Button"
 
-function Work() {
-    const [works, setWorks] = useState([
-        { id: crypto.randomUUID(), company: "", dates: "", position: "", duties: "" }
-    ]);
+function Work(
+    {works, updateWork, addWork}
+) {
 
-    function addWork() {
-        setWorks(prev => [
-        ...prev,
-        { id: crypto.randomUUID(), company: "", dates: "", position: "", duties: "" }
-        ]);
-    }
-
-    function updateWork(id, field, value) {
-        setWorks(prev =>
-        prev.map(work =>
-            work.id === id ? { ...work, [field]: value } : work
-        )
-        );
-    }
 
     return (
         <section>

@@ -3,25 +3,10 @@ import Input from '../Input/Input'
 import { useState } from 'react'
 import Button from "../Button/Button"
 
-function Education() {
-    const [educations, setEducations] = useState([
-        {id: crypto.randomUUID(), school: "", degree: "", gradYear: ""}
-    ]);
+function Education(
+    {educations, updateEducation, addEducation}
+) {
 
-    function addEducation() {
-        setEducations(prev => [
-            ...prev,
-            {id: crypto.randomUUID(), school: "", degree: "", gradYear: ""}
-        ]);
-    }
-
-    function updateEducation(id, field, value) {
-        setEducations(prev => 
-            prev.map(edu =>
-                edu.id === id ? {...edu, [field]: value} : edu
-            )
-        );
-    }
 
 
     return (
