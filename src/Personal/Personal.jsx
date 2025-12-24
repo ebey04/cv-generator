@@ -3,11 +3,23 @@ import Input from '../Input/Input'
 import { useState } from 'react'
 
 function Personal () {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [address, setAddress] = useState("");
-    const [phone, setPhone] = useState("");
-    const [email, setEmail] = useState("");
+
+    const [personals, setPersonals] - useState({
+                                                id: crypto.randomUUID(), 
+                                                firstName: "",
+                                                lastName: "",
+                                                address: "",
+                                                phone: "",
+                                                email: ""
+                                            })
+
+    function updatePersonal(id, field, value) {
+        setPersonals(prev => 
+            prev.map(personal =>
+                personal.id === id ? {...personal, [field]: value} : personal
+            )
+        );
+    }
 
     return (
         <> 
@@ -18,21 +30,21 @@ function Personal () {
                     label= "First Name"
                     name= "firstName"
                     value= {firstName}
-                    onChange= {(e) => setFirstName(e.target.value)}
+                    onChange= {(e) => updatePersonal(personal.id, "firstName", e.target.value)}
                     placeholder= "Jane"
                 />
                 <Input
                     label= "Last Name"
                     name= "lastName"
                     value= {lastName}
-                    onChange= {(e) => setLastName(e.target.value)}
+                    onChange= {(e) => updatePersonal(personal.id, "lastName", e.target.value)}
                     placeholder= "Doe"
                     />
                 <Input
                     label= "Address"
                     name= "address"
                     value= {address}
-                    onChange= {(e) => setAddress(e.target.value)}
+                    onChange= {(e) => updatePersonal(personal.id, "address", e.target.value)}
                     placeholder= "1234 Smith Street Somewhereville, CA 15887"
                     />
                 <Input
@@ -40,7 +52,7 @@ function Personal () {
                     name= "phone"
                     type= "tel"
                     value= {phone}
-                    onChange= {(e) => setPhone(e.target.value)}
+                    onChange= {(e) => updatePersonal(personal.id, "phone", e.target.value)}
                     placeholder= "142-382-8696"
                     pattern= "[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     />
@@ -49,7 +61,7 @@ function Personal () {
                     name= "email"
                     type= "email"
                     value= {email}
-                    onChange= {(e) => setEmail(e.target.value)}
+                    onChange= {(e) => updatePersonal(personal.id, "email", e.target.value)}
                     placeholder= "example@example.com"
                     />
                 </div>
