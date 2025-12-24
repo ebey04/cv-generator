@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import './resume.css'
-import Header from '../Header/Header'
 import Personal from '../Personal/Personal'
 import Education from '../Education/Education'
 import Work from '../Work/Work'
+import Button from '../Button/Button'
 
 function ResumeForm() {
     
 
     return (
         <>
-        <Header />
         <Personal />
         <Education />
         <Work />
