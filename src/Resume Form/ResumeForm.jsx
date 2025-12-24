@@ -54,24 +54,43 @@ function ResumeForm() {
         );
     }
 
+    const [submitted, setSubmitted] = useState(false);
+
+    function handleSubmit(e) {
+    e.preventDefault();
+    setSubmitted(true);
+    }
+
     return (
-        <>
-        <Personal 
-            personals = {personals}
-            updatePersonal = {updatePersonal}
-        />
-        <Education 
-            educations = {educations}
-            addEducation = {addEducation}
-            updateEducation = {updateEducation}
-        />
-        <Work 
-            works = {works}
-            updateWork = {updateWork}
-            addWork = {addWork}
-        />
-        </>
-    )
+        <div className="layout">
+            <form onSubmit={handleSubmit}> 
+                <Personal 
+                    personals = {personals}
+                    updatePersonal = {updatePersonal}
+                />
+                <Education 
+                    educations = {educations}
+                    addEducation = {addEducation}
+                    updateEducation = {updateEducation}
+                />
+                <Work 
+                    works = {works}
+                    updateWork = {updateWork}
+                    addWork = {addWork}
+                />
+
+                <Button type="submit" children="Submit" />
+            </form>
+
+            {submitted && (
+            <ResumePreview
+            personal={personals}
+            educations={educations}
+            works={works}
+            />
+        )}
+        </div>
+    );
 }
 
 export default ResumeForm;
