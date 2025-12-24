@@ -1,18 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './Header/Header'
-import Personal from './Personal/Personal'
-import Education from './Education/Education'
+import ResumeForm from './Resume Form/ResumeForm'
 
 function App() {
   
 
   return (
-    <>
-      <Header />
-      <Personal />
-      <Education />
-    </>
+    <ResumeForm />>
   )
 }
 
